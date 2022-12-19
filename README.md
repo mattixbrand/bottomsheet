@@ -14,9 +14,11 @@
 
 ```bash
 npm install @mattixes/bottomsheet
+```
 
-or
+### OR
 
+```bash
 npm install --save @mattixes/bottomsheet
 ```
 
@@ -34,23 +36,25 @@ pnpm install @mattixes/bottomsheet
 
 ## React
 
-Iniatial Latest Support v18.2.0
+[![react version](https://img.shields.io/npm/v/react.svg?style=flat-square)](https://www.npmjs.com/package/react)
+
+Initial Latest Support v18.2.0
 
 ## React-Dom
 
-Iniatial Latest Support v18.2.0
+Initial Latest Support v18.2.0
 
 ## NextJS
 
-Iniatial Latest Support v13.0.7
+Initial Latest Support v13.0.7
 
 ## @React-Spring/Web
 
-Iniatial Latest Support v9.6.1
+Initial Latest Support v9.6.1
 
 ## Use-Gesture/React
 
-Iniatial Latest Support v10.2.23
+Initial Latest Support v10.2.23
 
 # Getting started
 
