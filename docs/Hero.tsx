@@ -162,8 +162,8 @@ export default function Hero({ className }: { className?: string; }) {
                 rx="1"
                 fill="hsl(328deg 44% 24% / 50%)"
               />
-              <SvgText y="128">React</SvgText>
-              <SvgText y="174">Spring</SvgText>
+              <SvgText y="128">Mattixes</SvgText>
+              <SvgText y="174">Components</SvgText>
               <SvgText y="220">Bottom</SvgText>
               <SvgText y="266">Sheet</SvgText>
             </animated.g>

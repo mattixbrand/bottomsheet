@@ -1,5 +1,5 @@
-[![npm stat](https://img.shields.io/npm/dm/react-spring-bottom-sheet.svg?style=flat-square)](https://npm-stat.com/charts.html?package=react-spring-bottom-sheet)
-[![npm version](https://img.shields.io/npm/v/react-spring-bottom-sheet.svg?style=flat-square)](https://www.npmjs.com/package/react-spring-bottom-sheet)
+[![npm stat](https://img.shields.io/npm/dm/@mattixes/bottomsheet.svg?style=flat-square)](https://npm-stat.com/charts.html?package=@mattixes/bottomsheet)
+[![npm version](https://img.shields.io/npm/v/@mattixes/bottomsheet.svg?style=flat-square)](https://www.npmjs.com/package/@mattixes/bottomsheet)
 [![gzip size][gzip-badge]][unpkg-dist]
 [![size][size-badge]][unpkg-dist]
 [![module formats: cjs, es, and modern][module-formats-badge]][unpkg-dist]
@@ -61,7 +61,7 @@ import { useState } from 'react'
 import { BottomSheet } from '@mattixes/bottomsheet'
 
 // if setting up the CSS is tricky, you can add this to your page somewhere:
-// <link rel="stylesheet" href="https://unpkg.com/mattixes-bottomsheet/dist/style.css" crossorigin="anonymous">
+// <link rel="stylesheet" href="https://unpkg.com/@mattixes/bottomsheet@0.1.0/dist/style.css" crossorigin="anonymous">
 import '@mattixes/bottomsheet/dist/style.css'
 
 export default function Example() {
@@ -80,23 +80,30 @@ export default function Example() {
 TS support is baked in, and if you're using the `snapTo` API use `BottomSheetRef`:
 
 ```tsx
-import { useRef } from 'react'
-import { BottomSheet, BottomSheetRef } from '@mattixes/bottomsheet'
+import { useRef } from 'react';
+import { BottomSheet, BottomSheetRef } from '@mattixes/bottomsheet';
 
 export default function Example() {
-  const sheetRef = useRef<BottomSheetRef>()
+  const sheetRef = useRef<BottomSheetRef | any>();
   return (
-    <BottomSheet open ref={sheetRef}>
+    <BottomSheet open ref={sheetRef}
+      // the first snap points height depends on the content, while the second one is equivalent to 60vh
+      snapPoints={({ minHeight, maxHeight }) => [minHeight, maxHeight / 0.6]}
+      // Opens the largest snap point by default, unless the user selected one previously
+      defaultSnap={({ lastSnap, snapPoints }) =>
+        lastSnap ?? Math.max(...snapPoints)
+      }
+    >
       <button
         onClick={() => {
           // Full typing for the arguments available in snapTo, yay!!
-          sheetRef.current.snapTo(({ maxHeight }) => maxHeight)
+          sheetRef.current?.snapTo(({ maxHeight }: { maxHeight: number; }) => maxHeight);
         }}
       >
-        Expand to full height
+        Expand to full height<br />
       </button>
     </BottomSheet>
-  )
+  );
 }
 ```
 
@@ -134,27 +141,27 @@ module.exports = {
 ```
 
 
-# [Demos](https://react-spring-bottom-sheet.cocody.dev/)
+# [Demos](https://bottomsheet.mattixes.com)
 
-## [Basic](https://react-spring-bottom-sheet.cocody.dev/fixtures/simple)
+## [Basic](https://bottomsheet.mattixes.com/fixtures/simple)
 
 > [View demo code](/pages/fixtures/simple.tsx#L44-L48)
 
 MVP example, showing what you get by implementing `open`, `onDismiss` and a single **snap point** always set to `minHeight`.
 
-## [Snap points & overflow](https://react-spring-bottom-sheet.cocody.dev/fixtures/scrollable)
+## [Snap points & overflow](https://bottomsheet.mattixes.com/fixtures/scrollable)
 
 > [View demo code](/pages/fixtures/scrollable.tsx#L86-L97)
 
 A more elaborate example that showcases how snap points work. It also shows how it behaves if you want it to be open by default, and not closable. Notice how it responds if you resize the window, or scroll to the bottom and starts adjusting the height of the sheet without scrolling back up first.
 
-## [Sticky header & footer](https://react-spring-bottom-sheet.cocody.dev/fixtures/sticky)
+## [Sticky header & footer](https://bottomsheet.mattixes.com/fixtures/sticky)
 
 > [View demo code](/pages/fixtures/sticky.tsx#L41-L61)
 
 If you provide either a `header` or `footer` prop you'll enable the special behavior seen in this example. And they're not just sticky positioned, both areas support touch gestures.
 
-## [Non-blocking overlay mode](https://react-spring-bottom-sheet.cocody.dev/fixtures/aside)
+## [Non-blocking overlay mode](https://bottomsheet.mattixes.com/fixtures/aside)
 
 > [View demo code](/pages/fixtures/aside.tsx#L41-L53)
 
@@ -454,9 +461,9 @@ export default function Example() {
 - Phone frame used in logo: [Mono Devices 1.0](https://www.figma.com/community/file/896042888090872154/Mono-Devices-1.0)
 - iPhone frame used to wrap examples: [iOS 14 UI Kit for Figma](<https://www.figma.com/community/file/858143367356468985/(Variants)-iOS-%26-iPadOS-14-UI-Kit-for-Figma>)
 
-[gzip-badge]: http://img.badgesize.io/https://unpkg.com/react-spring-bottom-sheet/dist/index.es.js?compression=gzip&label=gzip%20size&style=flat-square
-[size-badge]: http://img.badgesize.io/https://unpkg.com/react-spring-bottom-sheet/dist/index.es.js?label=size&style=flat-square
-[unpkg-dist]: https://unpkg.com/react-spring-bottom-sheet/dist/
+[gzip-badge]: http://img.badgesize.io/https://unpkg.com/@mattixes/bottomsheet/dist/index.es.js?compression=gzip&label=gzip%20size&style=flat-square
+[size-badge]: http://img.badgesize.io/https://unpkg.com/@mattixes/bottomsheet/dist/index.es.js?label=size&style=flat-square
+[unpkg-dist]: https://unpkg.com/@mattixes/bottomsheet/dist/
 [module-formats-badge]: https://img.shields.io/badge/module%20formats-cjs%2C%20es%2C%20modern-green.svg?style=flat-square
 [react-spring]: https://github.com/pmndrs/react-spring
 [react-use-gesture]: https://github.com/pmndrs/react-use-gesture

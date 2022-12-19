@@ -29,7 +29,7 @@ import { useState } from 'react'
 import { BottomSheet } from '@mattixes/bottomsheet'
 
 // if setting up the CSS is tricky, you can add this to your page somewhere:
-// <link rel="stylesheet" href="https://unpkg.com/mattixes-bottomsheet/dist/style.css" crossorigin="anonymous">
+// <link rel="stylesheet" href="https://unpkg.com/@mattixes/bottomsheet@0.1.0/dist/style.css" crossorigin="anonymous">
 import '@mattixes/bottomsheet/dist/style.css'
 
 export default function Example() {
@@ -48,23 +48,30 @@ export default function Example() {
 TS support is baked in, and if you're using the `snapTo` API use `BottomSheetRef`:
 
 ```tsx
-import { useRef } from 'react'
-import { BottomSheet, BottomSheetRef } from '@mattixes/bottomsheet'
+import { useRef } from 'react';
+import { BottomSheet, BottomSheetRef } from '@mattixes/bottomsheet';
 
 export default function Example() {
-  const sheetRef = useRef<BottomSheetRef>()
+  const sheetRef = useRef<BottomSheetRef | any>();
   return (
-    <BottomSheet open ref={sheetRef}>
+    <BottomSheet open ref={sheetRef}
+      // the first snap points height depends on the content, while the second one is equivalent to 60vh
+      snapPoints={({ minHeight, maxHeight }) => [minHeight, maxHeight / 0.6]}
+      // Opens the largest snap point by default, unless the user selected one previously
+      defaultSnap={({ lastSnap, snapPoints }) =>
+        lastSnap ?? Math.max(...snapPoints)
+      }
+    >
       <button
         onClick={() => {
           // Full typing for the arguments available in snapTo, yay!!
-          sheetRef.current.snapTo(({ maxHeight }) => maxHeight)
+          sheetRef.current?.snapTo(({ maxHeight }: { maxHeight: number; }) => maxHeight);
         }}
       >
-        Expand to full height
+        Expand to full height<br />
       </button>
     </BottomSheet>
-  )
+  );
 }
 ```
 

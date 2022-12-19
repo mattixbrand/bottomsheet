@@ -27,7 +27,7 @@ export async function getStaticProps() {
   ] = await Promise.all([
     import('../package.json'),
     import('@react-spring/web/package.json'),
-    import('react-use-gesture/package.json'),
+    import('@use-gesture/react/package.json'),
   ]);
   if (!meta['og:site_name']) {
     meta['og:site_name'] = `${decentralize(name)} · Mattixes`;
