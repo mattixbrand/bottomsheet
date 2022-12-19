@@ -1,11 +1,11 @@
-import Document, { Head, Html, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-const ga = process.env.NEXT_PUBLIC_GA
+const ga = process.env.NEXT_PUBLIC_GA;
 
 export default class _DocumentPage extends Document {
   render() {
     return (
-      <Html>
+      <Html className='scroll-smooth md:scroll-auto hover:scroll-auto bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500' lang='en-US'>
         <Head>
           {ga && (
             <script
@@ -42,6 +42,6 @@ gtag('config', '${ga}');
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }

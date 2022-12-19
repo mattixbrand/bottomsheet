@@ -33,11 +33,11 @@ export default function Footer({
   reactUseGestureVersion: string;
 }) {
   return (
-    <footer className="px-10 py-32 grid md:grid-flow-col md:place-items-center place-content-center gap-8 relative">
+    <footer className="px-10 py-32 grid md:grid-flow-col md:place-items-center place-content-center gap-8 relative ">
       <div
         className={cx(
           styles.skewed,
-          'absolute top-0 right-0 bottom-0 bg-gray-900 w-screen'
+          'absolute top-0 right-0 bottom-0 bg-gray-900 w-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'
         )}
       />
       <Badge name="@mattixes/bottomsheet" version={version} />

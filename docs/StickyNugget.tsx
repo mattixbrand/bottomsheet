@@ -43,7 +43,7 @@ export default function StickyNugget({
       />
       <div>
         <div className="grid grid-flow-row place-items-start gap-2.5 sticky top-5 mb-5">
-          <h2 className={cx('text-5xl font-display font-bold', text)}>{heading}</h2>
+          <h2 className={cx('text-5xl font-display font-bold bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500', text)}>{heading}</h2>
           {[].concat(lead).map((lead, i) => (
             <p key={`lead-${i}`} className="text-2xl px-0.5">
               {lead}
