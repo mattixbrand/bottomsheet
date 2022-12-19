@@ -4,7 +4,7 @@
 [![size][size-badge]][unpkg-dist]
 [![module formats: cjs, es, and modern][module-formats-badge]][unpkg-dist]
 
-![Logo with the text Accessible, Delightful and Performant](https://mattixes.github.io/bottomsheet/readme.svg)
+![Logo with the text Accessible, Delightful and Performant](https://bottomsheet.vercel.app/readme.svg)
 
 **bottomsheet** is built on top of **[@react-spring/web]** and **[@use-gesture/react]**. It busts the myth that accessibility and supporting keyboard navigation and screen readers are allegedly at odds with delightful, beautiful, and highly animated UIs. Every animation and transition use CSS custom properties instead of manipulating them directly, allowing complete control over the experience from CSS alone.
 
@@ -127,27 +127,27 @@ module.exports = {
 ```
 
 
-# [Demos](https://bottomsheet.mattixes.com)
+# [Demos](https://bottomsheet.vercel.app)
 
-## [Basic](https://bottomsheet.mattixes.com/fixtures/simple)
+## [Basic](https://bottomsheet.vercel.app/fixtures/simple)
 
 > [View demo code](/pages/fixtures/simple.tsx#L44-L48)
 
 MVP example, showing what you get by implementing `open`, `onDismiss` and a single **snap point** always set to `minHeight`.
 
-## [Snap points & overflow](https://bottomsheet.mattixes.com/fixtures/scrollable)
+## [Snap points & overflow](https://bottomsheet.vercel.app/fixtures/scrollable)
 
 > [View demo code](/pages/fixtures/scrollable.tsx#L86-L97)
 
 A more elaborate example that showcases how snap points work. It also shows how it behaves if you want it to be open by default, and not closable. Notice how it responds if you resize the window, or scroll to the bottom and starts adjusting the height of the sheet without scrolling back up first.
 
-## [Sticky header & footer](https://bottomsheet.mattixes.com/fixtures/sticky)
+## [Sticky header & footer](https://bottomsheet.vercel.app/fixtures/sticky)
 
 > [View demo code](/pages/fixtures/sticky.tsx#L41-L61)
 
 If you provide either a `header` or `footer` prop you'll enable the special behavior seen in this example. And they're not just sticky positioned, both areas support touch gestures.
 
-## [Non-blocking overlay mode](https://bottomsheet.mattixes.com/fixtures/aside)
+## [Non-blocking overlay mode](https://bottomsheet.vercel.app/fixtures/aside)
 
 > [View demo code](/pages/fixtures/aside.tsx#L41-L53)
 

@@ -3,7 +3,7 @@
   "description": "✨ Accessible, 🪄 Delightful, and 🤯 Performant. Built on react-spring for the web, and react-use-gesture.",
   "license": "MIT",
   "author": "Cody Olsen",
-  "homepage": "https://bottomsheet.mattixes.com",
+  "homepage": "https://bottomsheet.vercel.app",
   "repository": "mattixes/bottomsheet",
   "bugs": {
     "url": "https://github.com/mattixes/bottomsheet/issues"
@@ -133,7 +133,7 @@
   },
   "meta": {
     "twitter:site": "@mattixes",
-    "twitter:image:src": "https://bottomsheet.mattixes.com/somecard.png"
+    "twitter:image:src": "https://bottomsheet.vercel.app/somecard.png"
   },
   "prettier": {
     "semi": false,
