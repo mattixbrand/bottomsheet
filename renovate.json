@@ -1,0 +1,9 @@
+{
+  "extends": ["github>stipsan/renovate-presets:auto"],
+  "packageRules": [
+    {
+      "depTypeList": ["dependencies", "peerDependencies"],
+      "automerge": false
+    }
+  ]
+}

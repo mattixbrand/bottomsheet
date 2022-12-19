@@ -1,0 +1,144 @@
+{
+  "name": "bottomsheet",
+  "description": "✨ Accessible, 🪄 Delightful, and 🤯 Performant. Built on react-spring for the web, and react-use-gesture.",
+  "license": "MIT",
+  "author": "Cody Olsen",
+  "homepage": "https://bottomsheet.mattixes.com",
+  "repository": "mattixes/bottomsheet",
+  "bugs": {
+    "url": "https://github.com/mattixes/bottomsheet/issues"
+  },
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "defaults.json",
+    "dist"
+  ],
+  "scripts": {
+    "build": "next build",
+    "build:declarations": "tsc --project tsconfig.declarations.json",
+    "prebuild:dist": "rimraf dist/**",
+    "build:dist": "npm run build:postcss && npm run build:microbundle && npm run build:declarations",
+    "build:microbundle": "NODE_ENV=production microbundle --define process.env.NODE_ENV=production --tsconfig tsconfig.microbundle.json -f cjs,es,modern --css-modules false --jsx React.createElement --jsxFragment React.Fragment",
+    "build:postcss": "postcss -d dist src/style.css",
+    "dev": "next",
+    "lint": "eslint . --ext ts,tsx,js,jsx --max-warnings 0 && tsc",
+    "prepublishOnly": "npm run build:dist",
+    "start": "next start",
+    "test": "npm run prepublishOnly && npm run build"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@juggle/resize-observer": "^3.4.0",
+    "@reach/portal": "^0.18.0",
+    "@react-spring/web": "^9.6.1",
+    "@use-gesture/react": "^10.2.23",
+    "@xstate/react": "^3.0.1",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "focus-trap": "^7.2.0",
+    "xstate": "^4.35.0"
+  },
+  "peerDependencies": {
+    "react": "16.8.0 || 17.x || 18.x"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@rooks/use-raf": "^4.5.0",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@tailwindcss/forms": "^0.5.3",
+    "@types/classnames": "^2.3.1",
+    "@types/node": "^18.11.16",
+    "@types/react": "^18.0.26",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "@use-it/interval": "^1.0.0",
+    "@xstate/inspect": "^0.6.0",
+    "autoprefixer": "^10.4.13",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "classnames": "^2.3.2",
+    "eslint": "^8.30.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "microbundle": "^0.15.1",
+    "next": "^13.0.7",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
+    "postcss-custom-properties-fallback": "^1.0.2",
+    "postcss-import-svg": "^1.0.5",
+    "postcss-preset-env": "^7.8.3",
+    "precss-v8": "^5.0.1",
+    "prettier": "^2.8.1",
+    "prettier-package-json": "^2.7.0",
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.5",
+    "smooth-scroll-into-view-if-needed": "^1.1.33",
+    "svgo": "^3.0.2",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.4"
+  },
+  "keywords": [
+    "mattix",
+    "mattixes",
+    "mattixes.com",
+    "animation",
+    "bottom-drawer",
+    "bottom-sheet",
+    "bottomsheet",
+    "dialog",
+    "drag-drop",
+    "draggableview",
+    "drawer",
+    "gesture-control",
+    "modal",
+    "motion",
+    "overlay",
+    "popup",
+    "react",
+    "react-spring",
+    "react-use-gesture",
+    "sheet",
+    "typescript"
+  ],
+  "browserslist": [
+    "Chrome >= 49",
+    "Android >= 58",
+    "Safari >= 9.1",
+    "iOS >= 9.3",
+    "Firefox >= 31",
+    "Edge >= 16"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jsnext:main": "dist/index.es.js",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --fix",
+    "*.{js,jsx,ts,tsx,md,html,css,yml,json}": "prettier --write",
+    "package.json": "prettier-package-json --write"
+  },
+  "meta": {
+    "twitter:site": "@mattixes",
+    "twitter:image:src": "https://bottomsheet.mattixes.com/somecard.png"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "source": "src/index.tsx",
+  "style": "dist/style.css"
+}
