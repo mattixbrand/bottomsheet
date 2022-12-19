@@ -8,9 +8,9 @@
 
 **bottomsheet** is built on top of **[@react-spring/web]** and **[@use-gesture/react]**. It busts the myth that accessibility and supporting keyboard navigation and screen readers are allegedly at odds with delightful, beautiful, and highly animated UIs. Every animation and transition use CSS custom properties instead of manipulating them directly, allowing complete control over the experience from CSS alone.
 
-##### Latest Supported Library
+#### Latest Supported Library
 
-React [![npm version](https://img.shields.io/npm/v/react.svg?style=flat-square)](https://www.npmjs.com/package/react) React-Dom [![npm version](https://img.shields.io/npm/v/react-dom.svg?style=flat-square)](https://www.npmjs.com/package/react-dom) NextJS [![npm version](https://img.shields.io/npm/v/next.svg?style=flat-square)](https://www.npmjs.com/package/next) @React-Spring/Web [![npm version](https://img.shields.io/npm/v/@react-spring/web.svg?style=flat-square)](https://www.npmjs.com/package/@react-spring/web) Use-Gesture/React [![npm version](https://img.shields.io/npm/v/@use-gesture/react.svg?style=flat-square)](https://www.npmjs.com/package/@use-gesture/react)
+**React** [![npm version](https://img.shields.io/npm/v/react.svg?style=flat-square)](https://www.npmjs.com/package/react)     **React-Dom** [![npm version](https://img.shields.io/npm/v/react-dom.svg?style=flat-square)](https://www.npmjs.com/package/react-dom)     **NextJS** [![npm version](https://img.shields.io/npm/v/next.svg?style=flat-square)](https://www.npmjs.com/package/next)    **@React-Spring/Web** [![npm version](https://img.shields.io/npm/v/@react-spring/web.svg?style=flat-square)](https://www.npmjs.com/package/@react-spring/web)     **Use-Gesture/React** [![npm version](https://img.shields.io/npm/v/@use-gesture/react.svg?style=flat-square)](https://www.npmjs.com/package/@use-gesture/react)
 
 # Installation
 
