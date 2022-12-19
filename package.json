@@ -1,5 +1,5 @@
 {
-  "name": "bottomsheet",
+  "name": "@mattixes/bottomsheet",
   "description": "✨ Accessible, 🪄 Delightful, and 🤯 Performant. Built on react-spring for the web, and react-use-gesture.",
   "license": "MIT",
   "author": "Cody Olsen",
