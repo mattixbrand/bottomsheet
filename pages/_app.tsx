@@ -30,7 +30,7 @@ export async function getStaticProps() {
     import('@use-gesture/react/package.json'),
   ]);
   if (!meta['og:site_name']) {
-    meta['og:site_name'] = `${decentralize(name)} · Mattixes`;
+    meta['og:site_name'] = `Bottomsheet · Mattixes | ✨ Accessible, 🪄 Delightful, and 🤯 Performant. Built on react-spring for the web, and react-use-gesture.` || `${decentralize(name)}`;
   }
 
   return {

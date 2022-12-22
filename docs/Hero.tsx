@@ -20,7 +20,7 @@ const Link: React.FC<{
     <a
       {...props}
       className={cx(
-        'bg-hero whitespace-nowrap rounded-full px-4 py-2 mr-2 text-xl hover:text-hero focus:outline-none focus-visible:text-hero focus-visible:ring-2 focus-visible:ring-hero transition-colors duration-150 focus-visible:duration-0 hover:font-bold hover:drop-shadow hover:shadow-2xl bg-indigo-500 shadow-lg shadow-indigo-500/50 shadow-lg shadow-indigo-500/40 hover:ring-2 ring-purple-500 ring-offset-4 ring-offset-slate-50 dark:ring-offset-slate-900',
+        'font-bold bg-hero whitespace-nowrap rounded-full px-4 py-2 mr-2 text-xl hover:text-hero focus:outline-none focus-visible:text-hero focus-visible:ring-2 focus-visible:ring-hero transition-colors duration-150 focus-visible:duration-0 hover:font-bold hover:drop-shadow hover:shadow-2xl bg-indigo-500 shadow-lg shadow-indigo-500/50 shadow-lg shadow-indigo-500/40 hover:ring-2 ring-purple-500 ring-offset-4 ring-offset-slate-50 dark:ring-offset-slate-900',
         className
       )}
       ref={ref}
@@ -217,7 +217,7 @@ export default function Hero({ className }: { className?: string; }) {
                 version="1.2"
                 viewBox="0 0 2000 857"
               >
-                <Mattixes aria-label="Website Logo" height="80%" weight="80%" />
+                <Mattixes aria-label="Website Logo" height="90%" weight="90%" />
               </svg>
               <SvgText y="220">Bottom</SvgText>
               <SvgText y="266">Sheet</SvgText>
