@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "Cody Olsen",
   "homepage": "https://bottomsheet.mattixes.com",
-  "repository": "mattixes/bottomsheet",
+  "repository": "https://github.com/mattixes/bottomsheet",
   "bugs": {
     "url": "https://github.com/mattixes/bottomsheet/issues"
   },
